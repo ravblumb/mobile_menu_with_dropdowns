@@ -1,0 +1,76 @@
+<body>
+
+  <div id="all">
+    <div id="top-pane" style="min-height:4em;">
+
+    <button id="mainmenuOpenbtn" onclick="openNav('mainmenu')" style="font-size: 2.3em; border: none; float: left; margin-left: 2%; margin-right: 8%; margin-top: 1%; background: none !important; color: white !important; display: none;">☰</button>
+    <button id="mainmenuClosebtn" onclick="closeNav('mainmenu')" style="display: block; font-size: 2.5em; border: none; float: left; margin: 1% 9.8% 2.5% 2%; background: none !important; color: white !important;">X</button>
+
+
+<div><a href="/home"><h1>My Logo</h1></a></div>
+
+
+      
+      
+        <a href="/logout" id="logout-button"><img width="3em" height="1em" alt="logout" src="/public/images/logout.png"></a>
+      </div>
+      
+    
+    <div id="mainmenu" style="display: block; top: 4.5em; bottom: 0px; overflow-y: auto;">
+      <ul>
+          <li>Company <img src="/images/down arrow.png" onclick="openNav('companysub');" class="open-shut" id="companysubOpenbtn" style="display: none;">
+            <img src="/images/up arrow.png" onclick="closeNav('companysub');" class="open-shut shut" id="companysubClosebtn" style="display: block;">
+            <ul id="companysub" style="display: block;">
+              <li>Plants <img src="/images/down arrow.png" onclick="openNav('plantssub');" class="open-shut" id="plantssubOpenbtn" style="display: none;">
+            <img src="/images/up arrow.png" onclick="closeNav('plantssub');" class="open-shut shut" id="plantssubClosebtn" style="display: block;">
+                  <ul id="plantssub" style="display: block;">
+                    <li>Add <img src="/images/down arrow.png" onclick="openNav('addPlantsSub');" class="open-shut" id="addPlantsSubOpenbtn" style="display: none;">
+            <img src="/images/up arrow.png" onclick="closeNav('addPlantsSub');" class="open-shut shut" id="addPlantsSubClosebtn" style="display: block;">
+                      <ul id="addPlantsSub" style="display: block;">
+                        <li>Industrial Plant</li>
+                        <li>Co-pack</li>
+                      </ul>
+                    </li>
+                    <li>Blow Up</li>
+                  </ul>
+              </li>
+
+              <li>Issues</li>
+            </ul>
+          </li>
+          <li>Ingredients</li>
+          <li>Products</li>
+      </ul>
+    </div>
+
+
+    <div id="content" style="top:4.5em;bottom: 0px;overflow-y:auto;z-index:-1; ">
+
+      
+    </div>
+  </div>
+
+<script language="javascript">
+                  function openNav(section) {
+                    var openbtn = `${section}Openbtn`;
+                    var closebtn = `${section}Closebtn`;
+                    var sectionName = `${section}`;
+                    document.getElementById(sectionName).style.display = "block";
+                    document.getElementById(openbtn).style.display = "none";
+                    document.getElementById(closebtn).style.display = "block";
+                   }
+
+          function closeNav(section) {
+                  var openbtn = `${section}Openbtn`;
+                  var closebtn = `${section}Closebtn`;
+                  var sectionName = `${section}`;
+                  document.getElementById(sectionName).style.display = "none";
+                  document.getElementById(openbtn).style.display = "block";
+                  document.getElementById(closebtn).style.display = "none";
+                }
+      </script>
+
+
+  
+
+</body>
